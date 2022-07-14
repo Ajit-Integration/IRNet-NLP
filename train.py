@@ -39,7 +39,7 @@ def train(args):
     model = IRNet(args, grammar)
 
 
-    if args.cuda: model.cuda()
+    if args.cuda: model.cpu()
 
     # now get the optimizer
     optimizer_cls = eval('torch.optim.%s' % args.optimizer)

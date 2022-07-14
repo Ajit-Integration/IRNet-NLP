@@ -29,7 +29,7 @@ def evaluate(args):
 
     model = IRNet(args, grammar)
 
-    if args.cuda: model.cuda()
+    if args.cuda: model.cpu()
 
     print('load pretrained model from %s'% (args.load_model))
     pretrained_model = torch.load(args.load_model,

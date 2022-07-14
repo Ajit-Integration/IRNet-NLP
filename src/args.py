@@ -76,7 +76,7 @@ def init_config(arg_parser):
     args = arg_parser.parse_args()
     torch.manual_seed(args.seed)
     if args.cuda:
-        torch.cuda.manual_seed(args.seed)
+        torch.manual_seed(args.seed)
     np.random.seed(int(args.seed * 13 / 7))
     random.seed(int(args.seed))
     return args
